@@ -1,0 +1,29 @@
+- var pageTitle  = "Page Title";
+- var profileJS  = (assets && assets["profile.js"] ? assets["profile.js"] : "assets/js/profile.js");
+- var vendorJS   = (assets && assets["vendor.js"] ? assets["vendor.js"] : "assets/js/vendor.js");
+- var profileCSS = "assets/css/" + (assets && assets["profile.css"] ? assets["profile.css"] : "profile.css");
+- var commonCSS  = "assets/css/" + (assets && assets["common.css"] ? assets["common.css"] : "common.css");
+- var mediaCSS   = "assets/css/" + (assets && assets["media.css"] ? assets["media.css"] : "media.css");
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    title= pageTitle
+    link(rel="stylesheet" type="text/css" href= commonCSS)/
+    link(rel="stylesheet" type="text/css" href= profileCSS)/
+    link(rel="stylesheet" type="text/css" href= mediaCSS)/
+    <!--[if lt IE 9]>
+    script(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")
+    <![endif]-->
+  body
+    .base-wrap
+      .header-wrap
+            
+      .main-base
+        nav.navside-wrap
+        main.content-wrap
+    
+    script(src= vendorJS defer)
+    script(src= profileJS defer)
